@@ -1,1 +1,13 @@
-<p>form works!</p>
+<h2>Formulario de alta de usuario</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+  <input formControlName="name" placeholder="Nombre" />
+  <input formControlName="lastName" placeholder="Apellido" />
+  <input formControlName="email" placeholder="Correo electrónico" />
+  <input formControlName="password" placeholder="Contraseña" type="password" />
+  <input formControlName="phone" placeholder="Teléfono (9 dígitos)" />
+  <input formControlName="age" placeholder="Edad" type="number" />
+  <input formControlName="address" placeholder="Dirección" />
+
+  <button type="submit" [disabled]="!userForm.valid">Enviar</button>
+</form>
