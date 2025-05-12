@@ -9,9 +9,16 @@ import { UserModel } from '../../models/user.model';
 })
 export class TableComponent {
   users: UserModel[] = [];
+  showExtraColumns = false;
+  headerStyleChanged = false;
 
   constructor() {
     this.users = this.createBaseUserList();
+  }
+
+  toggleHeaderStyle(): void {
+    this.showExtraColumns = !this.showExtraColumns;
+    this.headerStyleChanged = !this.headerStyleChanged;
   }
 
   private createBaseUserList(): UserModel[] {

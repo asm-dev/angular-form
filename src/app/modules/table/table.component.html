@@ -1,1 +1,32 @@
-<p>Hello table!</p>
+<h2>Tabla de usuarios</h2>
+
+<button (click)="toggleHeaderStyle()">Cambiar estilo de la tabla</button>
+
+<table>
+  <thead>
+    <tr
+      [ngStyle]="
+        headerStyleChanged ? { color: 'blue', 'font-size': '18px' } : {}
+      "
+    >
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th *ngIf="!showExtraColumns">Edad</th>
+      <th *ngIf="!showExtraColumns">Ciudad</th>
+      <th *ngIf="showExtraColumns">Activo</th>
+      <th *ngIf="showExtraColumns">Teléfono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td *ngIf="!showExtraColumns">{{ user.age }}</td>
+      <td *ngIf="!showExtraColumns">{{ user.city }}</td>
+      <td *ngIf="showExtraColumns">{{ user.active ? "Sí" : "No" }}</td>
+      <td *ngIf="showExtraColumns">{{ user.phone }}</td>
+    </tr>
+  </tbody>
+</table>

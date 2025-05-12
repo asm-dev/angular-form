@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TableComponent } from './table.component';
 
 describe('TableComponent', () => {
@@ -8,10 +7,11 @@ describe('TableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableComponent]
-    })
-    .compileComponents();
+      declarations: [TableComponent],
+    }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +19,11 @@ describe('TableComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should toggle extra columns', () => {
+    const initial = component.showExtraColumns;
+    component.toggleHeaderStyle();
+    expect(component.showExtraColumns).toBe(!initial);
   });
 });
