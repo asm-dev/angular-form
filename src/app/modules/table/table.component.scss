@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  background-color: $bg-table;
+  margin: 2rem 0;
+}
+
+th,
+td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid $border-dark;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #2a2a2a;
+  color: $text-light;
+}
+
+th {
+  white-space: nowrap;
+}
