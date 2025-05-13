@@ -22,9 +22,36 @@ input {
 
   &::placeholder {
     color: $text-muted;
+    opacity: 1;
   }
 
   &:focus {
     border-color: $orange;
   }
+}
+
+button {
+  background-color: $orange;
+  color: black;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($orange, 10%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 8px;
 }

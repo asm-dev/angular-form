@@ -1,11 +1,30 @@
 <form [formGroup]="userForm" (ngSubmit)="submitForm()">
   <input formControlName="name" placeholder="Nombre" />
-  <input formControlName="lastName" placeholder="Apellido" />
-  <input formControlName="email" placeholder="Correo electrónico" />
-  <input formControlName="password" placeholder="Contraseña" type="password" />
-  <input formControlName="phone" placeholder="Teléfono (9 dígitos)" />
-  <input formControlName="age" placeholder="Edad" type="number" />
-  <input formControlName="address" placeholder="Dirección" />
+  <div class="error" *ngIf="hasError('name')">El nombre es obligatorio.</div>
 
-  <button type="submit" [disabled]="!userForm.valid">Enviar</button>
+  <input formControlName="lastName" placeholder="Apellido" />
+  <div class="error" *ngIf="hasError('lastName')">
+    El apellido es obligatorio.
+  </div>
+
+  <input formControlName="email" placeholder="Correo electrónico" />
+  <div class="error" *ngIf="hasError('email')">Correo inválido.</div>
+
+  <input formControlName="password" type="password" placeholder="Contraseña" />
+  <div class="error" *ngIf="hasError('password')">Mínimo 6 caracteres.</div>
+
+  <input formControlName="phone" placeholder="Teléfono (9 dígitos)" />
+  <div class="error" *ngIf="hasError('phone')">Teléfono inválido.</div>
+
+  <input formControlName="age" type="number" placeholder="Edad" />
+  <div class="error" *ngIf="hasError('age')">Edad mínima: 18.</div>
+
+  <input formControlName="address" placeholder="Dirección" />
+  <div class="error" *ngIf="hasError('address')">
+    La dirección es obligatoria.
+  </div>
+
+  <button type="submit" [disabled]="userForm.invalid || userForm.pristine">
+    Enviar
+  </button>
 </form>

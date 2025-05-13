@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   selector: 'app-form',
   standalone: false,
   templateUrl: './form.component.html',
-  styleUrl: './form.component.scss',
+  styleUrls: ['./form.component.scss'],
 })
 export class FormComponent {
   userForm: FormGroup;
@@ -25,6 +25,13 @@ export class FormComponent {
   submitForm(): void {
     if (this.userForm.valid) {
       console.log(this.userForm.value);
+    } else {
+      this.userForm.markAllAsTouched();
     }
+  }
+
+  hasError(controlName: string): boolean {
+    const control = this.userForm.get(controlName);
+    return !!(control && control.invalid && control.touched);
   }
 }
