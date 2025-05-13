@@ -1,59 +1,19 @@
-# AngularForm
+# Uso de formularios, enrrutamiento y tablas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+Este proyecto ha sido desarrollado como parte de una actividad de aprendizaje sobre conceptos avanzados de Angular. He optado por usar el enfoque clásico con `NgModules`, desactivando la opción de _standalone components_ para consolidar conocimientos sobre el uso de módulos, enrutamiento y formularios siguiendo un enfoque de desarrollo clásico con Angular.
 
-## Development server
+## Modularización y routing
 
-To start a local development server, run:
+Aprendí a crear módulos separados (`FormModule` y `TableModule`) y configurarlos con rutas perezosas (lazy loading) usando `loadChildren`. Esto permite que Angular cargue solo lo necesario, mejorando el rendimiento y la organización del código.
 
-```bash
-ng serve
-```
+## Implementación de formularios
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+He implementado un formulario robusto y fácilmente escalable de alta de usuario usando `ReactiveFormsModule`, consiguiendo con ello:
 
-## Code scaffolding
+- Conseguir crear un `FormGroup` que utiliza varios `FormControls`
+- Conocer más sobre validaciones reactivas con `Validators`
+- Habilitado dinámico del botón de envío en base a si el formulario es válido o no
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Renderizado condicional con \*ngFor y manipulación de UI
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+En el módulo `table`, generé una tabla con datos falsos (mock) usando `*ngFor`, y añadí un botón que permite al usuario cambia los estilos y alternar la visibilidad de columnas de la tabla mediante el uso de `*ngIf`. Esto me ayudó a ver cómo se pueden construir interfaces dinámicas sin necesidad de librerías externas.
