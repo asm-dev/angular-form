@@ -1,8 +1,12 @@
-<h1>Gestión de usuarios</h1>
-
-<nav>
-  <button routerLink="/table">Ver Tabla</button>
-  <button routerLink="/form">Alta de Usuario</button>
-</nav>
+<div class="landing-buttons">
+  <app-navigation-button
+    text="Ver Tabla"
+    routerLink="/table"
+  ></app-navigation-button>
+  <app-navigation-button
+    text="Alta de Usuario"
+    routerLink="/form"
+  ></app-navigation-button>
+</div>
 
 <router-outlet></router-outlet>

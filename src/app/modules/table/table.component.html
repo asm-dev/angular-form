@@ -1,14 +1,6 @@
-<h2>Tabla de usuarios</h2>
-
-<button (click)="toggleHeaderStyle()">Cambiar estilo de la tabla</button>
-
 <table>
   <thead>
-    <tr
-      [ngStyle]="
-        headerStyleChanged ? { color: 'blue', 'font-size': '18px' } : {}
-      "
-    >
+    <tr [ngStyle]="headerStyleChanged ? { color: 'orange' } : {}">
       <th>ID</th>
       <th>Nombre</th>
       <th>Email</th>
@@ -30,3 +22,5 @@
     </tr>
   </tbody>
 </table>
+
+<button (click)="toggleHeaderStyle()">Cambiar estilo de la tabla</button>
