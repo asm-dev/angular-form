@@ -1,6 +1,8 @@
 # Uso de formularios, enrrutamiento y tablas
 
-Este proyecto ha sido desarrollado como parte de una actividad de aprendizaje sobre conceptos avanzados de Angular. He optado por usar el enfoque clásico con `NgModules`, desactivando la opción de _standalone components_ para consolidar conocimientos sobre el uso de módulos, enrutamiento y formularios siguiendo un enfoque de desarrollo clásico con Angular.
+Este proyecto ha sido desarrollado como parte de una actividad de aprendizaje sobre conceptos avanzados de Angular. 
+
+He optado por usar el enfoque clásico con `NgModules`, desactivando la opción de _standalone components_ para consolidar conocimientos sobre el uso de módulos, enrutamiento y formularios siguiendo un enfoque de desarrollo clásico con Angular.
 
 ![image](https://github.com/user-attachments/assets/ac986db3-9c44-4285-9ef9-769abc81ba84)
 
