@@ -1,23 +1,23 @@
-# Uso de formularios, enrrutamiento y tablas
+# Using forms, routing and tables
 
-Este proyecto ha sido desarrollado como parte de una actividad de aprendizaje sobre conceptos avanzados de Angular. 
+This project was developed as part of a learning activity on advanced Angular concepts. 
 
-He optado por usar el enfoque clásico con `NgModules`, desactivando la opción de _standalone components_ para consolidar conocimientos sobre el uso de módulos, enrutamiento y formularios siguiendo un enfoque de desarrollo clásico con Angular.
+I chose to use the classic approach with `NgModules`, disabling the _standalone components_ option to consolidate my knowledge of modules, routing and forms following a classic Angular development approach.
 
 ![image](https://github.com/user-attachments/assets/ac986db3-9c44-4285-9ef9-769abc81ba84)
 
-## Modularización y routing
+## Modularization and routing
 
-Aprendí a crear módulos separados (`FormModule` y `TableModule`) y configurarlos con rutas perezosas (lazy loading) usando `loadChildren`. Esto permite que Angular cargue solo lo necesario, mejorando el rendimiento y la organización del código.
+I learned to create separate modules (`FormModule` and `TableModule`) and configure them with lazy-loaded routes using `loadChildren`. This lets Angular load only what is needed, improving performance and code organization.
 
-## Implementación de formularios
+## Form implementation
 
-He implementado un formulario robusto y fácilmente escalable de alta de usuario usando `ReactiveFormsModule`, consiguiendo con ello:
+I implemented a robust and easily scalable user registration form using `ReactiveFormsModule`, achieving the following:
 
-- Conseguir crear un `FormGroup` que utiliza varios `FormControls`
-- Conocer más sobre validaciones reactivas con `Validators`
-- Habilitado dinámico del botón de envío en base a si el formulario es válido o no
+- Creating a `FormGroup` that uses several `FormControls`
+- Learning more about reactive validations with `Validators`
+- Dynamically enabling the submit button depending on whether the form is valid or not
 
-## Renderizado condicional con \*ngFor y manipulación de UI
+## Conditional rendering with \*ngFor and UI manipulation
 
-En el módulo `table`, generé una tabla con datos falsos (mock) usando `*ngFor`, y añadí un botón que permite al usuario cambia los estilos y alternar la visibilidad de columnas de la tabla mediante el uso de `*ngIf`. Esto me ayudó a ver cómo se pueden construir interfaces dinámicas sin necesidad de librerías externas.
+In the `table` module, I generated a table with mock data using `*ngFor`, and added a button that lets the user change the styles and toggle the visibility of the table columns using `*ngIf`. This helped me see how dynamic interfaces can be built without external libraries.
